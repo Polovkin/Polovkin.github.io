@@ -77,7 +77,7 @@ class DemoApplication {
       this.processorNode
     );
     SuperpoweredTrackLoader.downloadAndDecode(
-      "/static/audio/lycka.mp3",
+      "/static/audio/lycka.wac",
       loadedCallback
     );
   }

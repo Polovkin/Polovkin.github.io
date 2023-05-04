@@ -18,6 +18,7 @@ class DemoApplication {
     this.playerSpeedRef = document.getElementById("playerSpeedSlider");
     this.playerPitchRef = document.getElementById("playerPitchSlider");
     this.loadAssetButtonRef = document.getElementById("loadAssetButton");
+    this.audioInputRef = document.getElementById("audioInput");
     this.trackLoadingStatusRef = document.getElementById("trackLoadStatus");
     this.startApp();
   }
@@ -81,6 +82,19 @@ class DemoApplication {
       loadedCallback
     );
   }
+
+  loadAudioFileToInput(file) {
+
+    this.trackLoadingStatusRef.innerHTML = "Downloading and decoding track...";
+    this.webaudioManager.audioContext.resume();
+    const loadedCallback = this.processorNode.sendMessageToAudioScope.bind(
+        this.processorNode
+    );
+    SuperpoweredTrackLoader.downloadAndDecode(
+        file,
+        loadedCallback
+    );
+  }
 }
 
 const demoApplication = new DemoApplication();
@@ -89,3 +103,4 @@ const demoApplication = new DemoApplication();
 window.startApp = demoApplication.startApp.bind(demoApplication);
 window.loadTrack = demoApplication.loadTrack.bind(demoApplication);
 window.onParamChange = demoApplication.onParamChange.bind(demoApplication);
+window.loadAudioFileToInput = demoApplication.loadAudioFileToInput.bind(demoApplication);

@@ -9,7 +9,15 @@
 
   <body>
     <div class="container">
-      <img class="logo" src="/static/images/superpowered.svg" />
+      <div class="speedcontrolcontainer">
+        <audio style="width: 500px" src="./static/audio/lycka.mp3" controls></audio>
+        <div>
+          <label for="pbrate">Speed:</label>
+          <input type="range" id="pbrate" min=.1 max=4 value=1 step=.1>
+          <span></span>
+        </div>
+      </div>
+    <!--  <img class="logo" src="/static/images/superpowered.svg" />
       <div class="controls">
         <h2 class="demoTitle">Loading audio</h2>
 
@@ -53,11 +61,7 @@
 
           <p>Please note: HLS streaming is not available in the WebAssembly Superpowered Audio SDK.</br>
           Please see the native example for HLS.</p>
-      </div>
-      <div>
-        <h3>Expereminta</h3>
-        <input class="audio-input" type="file" id="audioInput" accept="audio/*" onchange="loadAudioFileToInput(this.files)" />
-      </div>
+      </div>-->
     </div>
     <script type="module" src="src/index.js"></script>
   </body>

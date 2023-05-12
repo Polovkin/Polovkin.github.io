@@ -51,7 +51,7 @@ class DemoApplication {
       this.playerVolumeRef.disabled = false;
       this.playerSpeedRef.disabled = false;
       this.playerPitchRef.disabled = false;
-      this.trackLoadingStatusRef.style.display = "none";
+      this.trackLoadingStatusRef = "Track loaded. Wait about 20 second. track played. Speed to any value";
     }
   }
 

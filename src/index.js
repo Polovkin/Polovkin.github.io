@@ -1,3 +1,4 @@
+/*
 const audio = document.querySelector('.speedcontrolcontainer  audio');
 const playbackrate = document.querySelector('.speedcontrolcontainer input');
 const display = document.querySelector('.speedcontrolcontainer span');
@@ -14,8 +15,9 @@ playbackrate.addEventListener('change', e => {
   display.innerText = displayvalue(playbackrate.value);
   window.localStorage.pbspeed = playbackrate.value;
 });
+*/
+console.log(123)
 
-/*
 import {
   SuperpoweredWebAudio,
   SuperpoweredTrackLoader,
@@ -95,7 +97,7 @@ class DemoApplication {
       this.processorNode
     );
     SuperpoweredTrackLoader.downloadAndDecode(
-      "/static/audio/lycka.mp3",
+      "/static/audio/test.mp3",
       loadedCallback
     );
   }
@@ -107,4 +109,4 @@ const demoApplication = new DemoApplication();
 window.startApp = demoApplication.startApp.bind(demoApplication);
 window.loadTrack = demoApplication.loadTrack.bind(demoApplication);
 window.onParamChange = demoApplication.onParamChange.bind(demoApplication);
-*/
+

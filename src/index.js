@@ -44,14 +44,14 @@ class DemoApplication {
 
   onMessageProcessorAudioScope(message) {
     if (message.event === "ready") {
-      // The processor node is now loaded
+      this.trackLoadingStatusRef = "Track loaded. Wait about 20 second. track played. Speed to any value";
     }
     if (message.event === "assetLoaded") {
       this.loadAssetButtonRef.style.display = "none";
       this.playerVolumeRef.disabled = false;
       this.playerSpeedRef.disabled = false;
       this.playerPitchRef.disabled = false;
-      this.trackLoadingStatusRef = "Track loaded. Wait about 20 second. track played. Speed to any value";
+
     }
   }
 

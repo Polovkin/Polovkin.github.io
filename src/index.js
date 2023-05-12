@@ -16,7 +16,7 @@ playbackrate.addEventListener('change', e => {
   window.localStorage.pbspeed = playbackrate.value;
 });
 */
-console.log(123)
+console.log(321)
 
 import {
   SuperpoweredWebAudio,
@@ -44,14 +44,14 @@ class DemoApplication {
 
   onMessageProcessorAudioScope(message) {
     if (message.event === "ready") {
-      this.trackLoadingStatusRef = "Track loaded. Wait about 20 second. track played. Speed to any value";
+      this.trackLoadingStatusRef.innerHTML = "Track start playing.... wait 10-15 seconds and change the speed";
     }
     if (message.event === "assetLoaded") {
       this.loadAssetButtonRef.style.display = "none";
       this.playerVolumeRef.disabled = false;
       this.playerSpeedRef.disabled = false;
       this.playerPitchRef.disabled = false;
-
+      this.trackLoadingStatusRef.style.display = "none";
     }
   }
 

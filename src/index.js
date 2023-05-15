@@ -44,7 +44,7 @@ class DemoApplication {
 
   onMessageProcessorAudioScope(message) {
     if (message.event === "ready") {
-      this.trackLoadingStatusRef.innerHTML = "Press download & play, wait 10-15 seconds and change the speed. Track starts with silence about 10 seconds in.";
+      this.trackLoadingStatusRef.innerHTML = "";
     }
     if (message.event === "assetLoaded") {
       this.loadAssetButtonRef.style.display = "none";

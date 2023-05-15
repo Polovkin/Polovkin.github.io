@@ -12,7 +12,6 @@
   <img class="logo" src="/static/images/superpowered.svg" />
       <div class="controls">
         <h2 class="demoTitle">Loading audio</h2>
-
           <span>Player volume</span>
           <input
             id="playerVolumeSlider"
@@ -50,16 +49,26 @@
             Download and play audio
           </button>
           <h4 id="trackLoadStatus"></h4>
+          <div>
+            <h2 style="color: red">Press download & play. Change Playback rate to any value more than 1x</h2>
+            <p style="font-weight: bold">Almost immediately, you should hear artifacts similar to micro-interruptions in the track.</p>
+            <p style="font-weight: bold">The artifacts will continue until the end of the track even if you return the speed value to 1.</p>
+            <hr>
+          </div>
+          <div>
+            <h2>superpoverRecorder record with artifacts</h2>
+            <audio controls>
+              <source src="/static/audio/fail.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio></div>
+          <div>
+            <hr>
+            <h2>Download problem tracks:</h2>
+            <a href="/static/audio/test.mp3" download>Problem track #1</a>
 
-          <p>Please note: HLS streaming is not available in the WebAssembly Superpowered Audio SDK.</br>
-          Please see the native example for HLS.</p>
+          </div>
+
       </div>
-      <h1>Download problem tracks:</h1>
-      <a href="/static/audio/test.mp3" download>Problem track #1</a>
-      <a href="/static/audio/track2.mp3" download>Problem track #2</a>
-        <a href="/static/audio/track3.mp3" download>Problem track #3</a>
-        <a href="/static/audio/track4.mp3" download>Problem track #4</a>
-        <a href="/static/audio/track5.mp3" download>Problem track #5</a>
     </div>
     <script type="module" src="src/index.js"></script>
   </body>

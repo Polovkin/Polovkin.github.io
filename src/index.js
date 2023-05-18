@@ -16,13 +16,15 @@ playbackrate.addEventListener('change', e => {
   window.localStorage.pbspeed = playbackrate.value;
 });
 */
-console.log(321)
+
 
 import {
   SuperpoweredWebAudio,
   SuperpoweredTrackLoader,
   SuperpoweredGlue
 } from "../static/superpowered/SuperpoweredWebAudio.js";
+
+const trackName = 'SIG test-19 mix +12 db.mp3'
 
 const superPoweredWasmLocation = "/static/superpowered/superpowered.wasm";
 const playerProcessorUrl = "/static/processors/playerProcessor.js";
@@ -97,7 +99,7 @@ class DemoApplication {
       this.processorNode
     );
     SuperpoweredTrackLoader.downloadAndDecode(
-      "/static/audio/test.mp3",
+      `/static/audio/${trackName}}`,
       loadedCallback
     );
   }

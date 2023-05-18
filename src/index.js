@@ -24,7 +24,7 @@ import {
   SuperpoweredGlue
 } from "../static/superpowered/SuperpoweredWebAudio.js";
 
-const trackName = 'SIG test-19 mix +12 db.mp3'
+const trackName = 'sig.mp3'
 
 const superPoweredWasmLocation = "/static/superpowered/superpowered.wasm";
 const playerProcessorUrl = "/static/processors/playerProcessor.js";

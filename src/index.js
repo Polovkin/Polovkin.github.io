@@ -99,7 +99,7 @@ class DemoApplication {
       this.processorNode
     );
     SuperpoweredTrackLoader.downloadAndDecode(
-      `/static/audio/${trackName}}`,
+      `/static/audio/${trackName}`,
       loadedCallback
     );
   }
